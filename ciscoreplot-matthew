@@ -27,8 +27,6 @@ ciscoreplot<-function(x, comps, namevec){
   outliers<-((x$x[,comps[1]]^2)/(x$sdev[comps[1]]^2)+(x$x[,comps[2]]^2)/(x$sdev[comps[2]]^2))>5.99
   
   points(x$x[outliers, comps[1]], x$x[outliers, comps[2]], pch = 19, cex = 1.2, col = "Blue")
-  
-  text(x$x[outliers, comps[1]],x$x[outliers, comps[2]], col = "Blue", lab = namevec[outliers])
 }
 
 
